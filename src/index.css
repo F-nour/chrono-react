@@ -1,3 +1,26 @@
+:root {
+  --mainColor: wheat;
+  --timeColor: red;
+  --border: 1px solid
+}
+
+*:not(html, head, meta, link, script, p) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+*[tabindex]:focus {
+  outline: none;
+  background-color: #ffffff18;
+  transition: all 0.3s ease-in-out;
+}
+
+p {
+  padding: 0;
+  margin: 0.5rem 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +28,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--mainColor);
+  width: 100vw;
+  height: 100vh;
+  justify-content: space-evenly;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.root {
+  background: content-box linear-gradient(159deg, rgba(110,109,109,1) 0%, rgba(38,38,38,1) 100%);
+  border-radius: 50%;
+  border: var(--mainColor) solid 4px;
+  font-weight: bold;
+  width: 350px;
+  height: 350px;
+  justify-content: start;
+}
+
+.root > div:not(.timer, .timer-actions) {
+  border-bottom: var(--mainColor) solid 1px;
+  width: 100%;
 }

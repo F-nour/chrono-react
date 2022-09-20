@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+.calendar {
+  padding-top: 2.5rem;
+  color: var(--timeColor);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 26px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.time {
+  color: var(--timeColor);
+  font-size: 72px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.timer, .timer-actions {
+  width: 100%;
+  flex-direction: row;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--timeColor);
+  font-size: 48px;
 }
 
-.App-link {
-  color: #61dafb;
+.timer-actions {
+  gap: 16px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn {
+  border-radius: 50%;
+  min-width: 120px;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out
+}
+.btn:hover,
+.btn:focus {
+  color: var(--mainColor);
+  outline: none;
+}
+
+.btn-pause {
+  background-color: rgb(255, 165, 0, 0.8);
+  border: var(--border) rgb(90, 59, 0);
+}
+.btn-pause:hover,
+.btn-pause:focus {
+  background-color: rgba(90, 59, 0, 0.8);
+  border: var(--border) rgb(255, 165, 0)
+}
+.btn-pause:active {
+  background-color:rgb(29, 19, 0)
+}
+
+.btn-stop {
+  background-color: rgb(255, 0, 0, 0.8);
+  border: var(--border) rgb(90, 0, 0);
+}
+.btn-stop:hover,
+.btn-stop:focus {
+  background-color: rgba(90, 0, 0, 0.8);
+  border: var(--border) red;
+}
+.btn-stop:active {
+  background-color: rgb(47, 0, 0)
+}
+
+.btn-start {
+  background-color: rgb(75, 255, 0, 0.8);
+  border: var(--border) rgb(10, 77, 0);
+}
+.btn-start:hover,
+.btn-start:focus {
+  background-color: rgba(10, 77, 0, 0.8);
+  border: var(--border) rgb(75, 255, 0)
+}
+.btn-start:active {
+  background-color: rgb(5, 37, 0)
 }
